@@ -1,0 +1,53 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.anchorPane {
+	-fx-background-color: #ffffff;
+}
+
+.sidebarLeft {
+	-fx-background-color: #ffffff;
+}
+
+.sidebarRight {
+	-fx-background-color: #4d1d4d;
+}
+
+.btnLogin {
+	-fx-background-color: #4d1d4d;
+	-fx-text-fill: #ffffff;
+	-fx-background-radius: 3px;
+}
+
+.btnLogin:hover {
+	-fx-background-color: transparent;
+	-fx-background-radius: 3px;
+	-fx-text-fill: #4d1d4d;
+	-fx-border-color: #4d1d4d;
+	-fx-border-width: 1px;
+	-fx-border-style: solid;
+	-fx-border-radius: 3px;
+}
+
+.btnRegister {
+	-fx-background-color: #bdc3c7;
+	-fx-text-fill: #2c3e50;
+	-fx-background-radius: 3px;
+}
+
+.btnRegister:hover {
+	-fx-background-color: transparent;
+	-fx-background-radius: 3px;
+	-fx-text-fill: #bdc3c7;
+	-fx-border-color: #bdc3c7;
+	-fx-border-width: 1px;
+	-fx-border-style: solid;
+	-fx-border-radius: 3px;
+}
+
+.forgetField {
+	-fx-text-fill: #a3a3a3;
+}
+
+.forgetField:hover {
+	-fx-text-fill: #4d1d4d;
+}
