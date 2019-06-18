@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="788.0" prefWidth="1288.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="788.0" prefWidth="1288.0">
+         <children>
+            <Pane layoutX="322.0" prefHeight="788.0" prefWidth="965.0">
+               <children>
+                  <Line endX="451.0" endY="7.0" layoutX="448.0" layoutY="95.0" startX="-383.0" startY="7.0" strokeWidth="0.3" />
+                  <Label layoutX="313.0" layoutY="35.0" text="ACERCA DE NUESTRA EMPRESA" textFill="#4d1d4d">
+                     <font>
+                        <Font name="Segoe UI Symbol" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="93.0" layoutY="134.0" text="Conoce mas acerca de quienes somos, los servicios que tenemos a tu disposicion y nuestras sedes" textFill="#4d1d4d">
+                     <font>
+                        <Font name="Segoe UI Symbol" size="18.0" />
+                     </font>
+                  </Label>
+                  <TabPane layoutX="125.0" layoutY="213.0" prefHeight="419.0" prefWidth="715.0" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab text="HealingTocuh">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="53.0" layoutY="95.0" pickOnBounds="true" smooth="false">
+                                       <image>
+                                          <Image url="@../../../../heart-beat.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Servicios ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                        <Tab text="Nuestras sedes">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </Pane>
+            <Pane prefHeight="788.0" prefWidth="322.0" styleClass="sidebarLeft" stylesheets="@../main/SearchAppoiments.css">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="45.0" layoutY="546.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../lifeline-in-a-heart-outline.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="116.0" layoutY="555.0" text="Quienes somos" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Symbol" size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="45.0" layoutY="465.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../../../../settings.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="116.0" layoutY="474.0" text="Configuracion" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Symbol" size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="45.0" layoutY="388.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../../../../document%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="116.0" layoutY="397.0" text="Mis servicios" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Symbol" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="137.0" fitWidth="322.0" layoutY="14.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../../../../logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="116.0" layoutY="313.0" text="Consulta tus citas" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Symbol" size="19.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="45.0" layoutY="299.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../../../../magnigier.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="45.0" layoutY="208.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../../../../calendar-with-a-clock-time-tools.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="124.0" layoutY="216.0" text="Agendar citas" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Symbol" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

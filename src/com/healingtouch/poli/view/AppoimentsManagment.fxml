@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="788.0" prefWidth="1288.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="788.0" prefWidth="1288.0">
+         <children>
+            <Pane layoutX="322.0" prefHeight="788.0" prefWidth="965.0">
+               <children>
+                  <Label layoutX="322.0" layoutY="34.0" text="ADMINISTRACION DE CITAS" textFill="#4d1d4d">
+                     <font>
+                        <Font name="Segoe UI Symbol" size="24.0" />
+                     </font>
+                  </Label>
+                  <Line endX="451.0" endY="7.0" layoutX="448.0" layoutY="95.0" startX="-383.0" startY="7.0" strokeWidth="0.3" />
+                  <ComboBox focusTraversable="false" layoutX="351.0" layoutY="150.0" prefHeight="25.0" prefWidth="262.0" promptText="Citas pendientes, atendidas y canceladas" />
+                  <TableView focusTraversable="false" layoutX="141.0" layoutY="228.0" prefHeight="381.0" prefWidth="664.0">
+                    <columns>
+                      <TableColumn prefWidth="120.0" text="Codigo cita" />
+                      <TableColumn prefWidth="152.0" text="Paciente" />
+                        <TableColumn prefWidth="155.0" text="Fecha" />
+                        <TableColumn prefWidth="112.0" text="Hora" />
+                        <TableColumn prefWidth="123.0" text="Estado" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane prefHeight="788.0" prefWidth="322.0" styleClass="sidebarLeft" stylesheets="@../main/SearchAppoiments.css">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="44.0" layoutY="546.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../lifeline-in-a-heart-outline.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="116.0" layoutY="555.0" text="Quienes somos" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Symbol" size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="45.0" layoutY="465.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../../../../settings.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="116.0" layoutY="474.0" text="Configuracion" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Symbol" size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="45.0" layoutY="388.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../../../../document%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="116.0" layoutY="397.0" text="Mis servicios" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Symbol" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="116.0" layoutY="313.0" text="Consulta tus citas" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Symbol" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="120.0" layoutY="217.0" text="Atiende tus citas" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Symbol" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="137.0" fitWidth="322.0" layoutY="14.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../../../../logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="45.0" layoutY="299.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../../../../magnigier.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="45.0" layoutY="208.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../../../../calendar-with-a-clock-time-tools.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
