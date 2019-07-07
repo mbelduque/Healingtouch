@@ -12,13 +12,13 @@
 	-fx-background-color: #4d1d4d;
 }
 
-.btnLogin {
+.btnDark {
 	-fx-background-color: #4d1d4d;
 	-fx-text-fill: #ffffff;
 	-fx-background-radius: 3px;
 }
 
-.btnLogin:hover {
+.btnDark:hover {
 	-fx-background-color: transparent;
 	-fx-background-radius: 3px;
 	-fx-text-fill: #4d1d4d;
@@ -28,13 +28,13 @@
 	-fx-border-radius: 3px;
 }
 
-.btnRegister {
+.btnLight {
 	-fx-background-color: #bdc3c7;
-	-fx-text-fill: #2c3e50;
+	-fx-text-fill: #4d1d4d;
 	-fx-background-radius: 3px;
 }
 
-.btnRegister:hover {
+.btnLight:hover {
 	-fx-background-color: transparent;
 	-fx-background-radius: 3px;
 	-fx-text-fill: #bdc3c7;
@@ -50,4 +50,36 @@
 
 .forgetField:hover {
 	-fx-text-fill: #4d1d4d;
+}
+
+.closeSesion:hover {
+	-fx-underline: true;
+}
+
+.dashBoardLeft {
+	-fx-background-color: #4d1d4d;
+}
+
+.dashBoardRight {
+	-fx-background-color: #f5f6fa;
+}
+
+.specialitys:hover {
+	-fx-background-color: #d4ccd8;
+}
+
+.menuLeft:hover {
+	-fx-background-color: #6f486f
+}
+
+.table-view .column-header {
+	-fx-background-color: #4d1d4d;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #ffffff;
+}
+
+.tab-header-background {
+    -fx-background-color: #4d1d4d;
 }

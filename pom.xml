@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.healingtouch.poli</groupId>
+	<groupId>com.healingtouch</groupId>
 	<artifactId>Healingtouch</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
@@ -31,7 +31,7 @@
 				<version>8.8.3</version>
 				<configuration>
 					<vendor>Mauricio-Belduque</vendor>
-					<mainClass>com.healingtouch.poli.main.Main</mainClass>
+					<mainClass>com.healingtouch.main.Main</mainClass>
 					<deployDir>${project.basedir}/src/main/deploy</deployDir>
 					<verbose>true</verbose>
 					<appName>Healingtouch</appName>
@@ -60,6 +60,24 @@
 		</plugins>
 	</reporting>
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.39</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-pool/commons-pool -->
+		<dependency>
+			<groupId>commons-pool</groupId>
+			<artifactId>commons-pool</artifactId>
+			<version>1.6</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
@@ -72,6 +90,18 @@
 			<groupId>emma</groupId>
 			<artifactId>emma</artifactId>
 			<version>2.1.5320</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.jfoenix/jfoenix -->
+		<dependency>
+			<groupId>com.jfoenix</groupId>
+			<artifactId>jfoenix</artifactId>
+			<version>8.0.8</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/de.jensd/fontawesomefx -->
+		<dependency>
+			<groupId>de.jensd</groupId>
+			<artifactId>fontawesomefx</artifactId>
+			<version>8.9</version>
 		</dependency>
 	</dependencies>
 </project>
