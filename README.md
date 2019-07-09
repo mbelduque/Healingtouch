@@ -5,7 +5,10 @@
 <a href="https://github.com/mbelduque/Healingtouch/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/mbelduque/healingtouch.svg"></a>
 <a href="https://github.com/mbelduque/Healingtouch">
 <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/mbelduque/healingtouch/total.svg">
- </a>
+</a>
+<a href="https://github.com/mbelduque/Healingtouch/stargazers">
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/mbelduque/healingtouch.svg?style=social">
+</a>
 [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/mauricio-belduque-guzman-925541137/)
 
 
