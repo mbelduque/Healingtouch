@@ -15,8 +15,6 @@
   <h3 align="center">JavaFX Appointment Booking system</h3>
 
   <p align="center">
-    JavaFX Appointment Booking System
-    <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
