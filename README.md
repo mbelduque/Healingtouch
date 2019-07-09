@@ -1,7 +1,7 @@
 # Healingtouch
 
 [![Build Status][build-shield]][build-url]
-[![Contributors][contributors-shield]][contributors-url](https://github.com/mbelduque/Healingtouch/graphs/contributors)
+[![Contributors][contributors-shield]](https://github.com/mbelduque/Healingtouch/graphs/contributors)
 [![GPL-3.0 License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
