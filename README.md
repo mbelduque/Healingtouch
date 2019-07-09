@@ -1,4 +1,4 @@
-
+# Healingtouch Appointment Booking system
 
 [![Build Status][build-shield]][build-url]
 [![Contributors][contributors-shield]][contributors-url]
