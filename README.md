@@ -2,7 +2,7 @@
 
 [![Build Status][build-shield]][build-url]
 [![Contributors][contributors-shield]][contributors-url]
-[![MIT License][license-shield]][license-url]
+[![GPL-3.0 License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
