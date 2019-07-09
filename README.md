@@ -1,4 +1,4 @@
-<h3>JavaFX Appointment Booking System</h3>
+
 
 [![Build Status][build-shield]][build-url]
 [![Contributors][contributors-shield]][contributors-url]
@@ -11,14 +11,11 @@
   <h1 align="center">
     <img src="https://github.com/mbelduque/Healingtouch/blob/master/src/com/healingtouch/resources/images/healingtouch.png">
 </h1>
-<sup>
-<b>JFoenix is an open source Java library, that implements Google Material Design using Java components</b>
-</sup>
 </p>
   <h3 align="center">Best-README-Template</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    JavaFX Appointment Booking System
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
