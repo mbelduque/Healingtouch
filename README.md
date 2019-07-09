@@ -2,7 +2,7 @@
 
 [![Build Status][build-shield]][build-url]
 [![Contributors][contributors-shield]](https://github.com/mbelduque/Healingtouch/graphs/contributors)
-[![GPL-3.0 License][license-shield]][license-url]
+[![GPL-3.0 License][license-shield]](https://github.com/mbelduque/Healingtouch/blob/master/LICENSE)
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
