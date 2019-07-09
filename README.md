@@ -5,15 +5,16 @@
 [![GPL-3.0 License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/mbelduque/Healingtouch">
-    <img src="https://github.com/mbelduque/Healingtouch/blob/master/src/com/healingtouch/resources/images/healingtouch.png" alt="Logo">
-  </a>
-
+  <h1 align="center">
+    <img src="https://github.com/mbelduque/Healingtouch/blob/master/src/com/healingtouch/resources/images/healingtouch.png">
+</h1>
+<sup>
+<b>JFoenix is an open source Java library, that implements Google Material Design using Java components</b>
+</sup>
+</p>
   <h3 align="center">Best-README-Template</h3>
 
   <p align="center">
