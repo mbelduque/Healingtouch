@@ -12,7 +12,7 @@
     <img src="https://github.com/mbelduque/Healingtouch/blob/master/src/com/healingtouch/resources/images/healingtouch.png">
 </h1>
 </p>
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">JavaFX Appointment Booking system</h3>
 
   <p align="center">
     JavaFX Appointment Booking System
