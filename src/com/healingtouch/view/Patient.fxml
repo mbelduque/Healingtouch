@@ -28,58 +28,93 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="788.0" prefWidth="1288.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.healingtouch.controller.PatientController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#dragged"
+	onMousePressed="#pressed" prefHeight="788.0" prefWidth="1288.0"
+	xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.healingtouch.controller.PatientController">
 	<children>
-		<AnchorPane layoutX="300.0" prefHeight="788.0" prefWidth="988.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+		<AnchorPane layoutX="300.0" prefHeight="788.0"
+			prefWidth="988.0" AnchorPane.bottomAnchor="0.0"
+			AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="0.0">
 			<children>
-				<Pane fx:id="pnl_search_appointment" prefHeight="788.0" prefWidth="988.0" styleClass="dashBoardRight" stylesheets="@../resources/css/application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+				<Pane fx:id="pnl_search_appointment" prefHeight="788.0"
+					prefWidth="988.0" styleClass="dashBoardRight"
+					stylesheets="@../resources/css/application.css"
+					AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+					AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 					<children>
-						<AnchorPane layoutY="37.0" prefHeight="92.0" prefWidth="988.0" style="-fx-background-color: #4d1d4d;">
+						<AnchorPane layoutY="37.0" prefHeight="92.0"
+							prefWidth="988.0" style="-fx-background-color: #4d1d4d;">
 							<children>
-								<Label graphicTextGap="20.0" layoutX="87.0" layoutY="37.0" text="Consulta tus citas" textFill="WHITE">
+								<Label graphicTextGap="20.0" layoutX="87.0" layoutY="37.0"
+									text="Consulta tus citas" textFill="WHITE">
 									<font>
 										<Font name="Segoe UI Symbol" size="24.0" />
 									</font>
 								</Label>
-								<Label layoutX="87.0" layoutY="20.0" text="/ paciente / citas" textFill="WHITE" />
+								<Label layoutX="87.0" layoutY="20.0"
+									text="/ paciente / citas" textFill="WHITE" />
 							</children>
 						</AnchorPane>
-						<FontAwesomeIconView fill="#4d1d4d" glyphName="CLOSE" layoutX="965.0" layoutY="24.0" onMouseClicked="#close" size="16">
+						<FontAwesomeIconView fill="#4d1d4d"
+							glyphName="CLOSE" layoutX="965.0" layoutY="24.0"
+							onMouseClicked="#close" size="16">
 							<cursor>
 								<Cursor fx:constant="HAND" />
 							</cursor>
 						</FontAwesomeIconView>
-						<FontAwesomeIconView fill="#4d1d4d" glyphName="MINUS" layoutX="933.0" layoutY="24.0" onMouseClicked="#min" size="16" text="">
+						<FontAwesomeIconView fill="#4d1d4d"
+							glyphName="MINUS" layoutX="933.0" layoutY="24.0"
+							onMouseClicked="#min" size="16" text="">
 							<cursor>
 								<Cursor fx:constant="HAND" />
 							</cursor>
 						</FontAwesomeIconView>
-						<Label layoutX="403.0" layoutY="159.0" text="Consulta y/o cancela tus citas" textFill="#4d1d4d">
+						<Label layoutX="403.0" layoutY="159.0"
+							text="Consulta y/o cancela tus citas" textFill="#4d1d4d">
 							<font>
 								<Font name="Segoe UI Symbol" size="14.0" />
 							</font>
 						</Label>
-						<GridPane layoutX="50.0" layoutY="253.0" prefHeight="488.0" prefWidth="888.0">
+						<GridPane layoutX="50.0" layoutY="253.0"
+							prefHeight="488.0" prefWidth="888.0">
 							<columnConstraints>
-								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES"
+									minWidth="10.0" prefWidth="100.0" />
 							</columnConstraints>
 							<rowConstraints>
-								<RowConstraints maxHeight="239.0" minHeight="0.0" prefHeight="61.0" vgrow="SOMETIMES" />
-								<RowConstraints maxHeight="536.0" minHeight="10.0" prefHeight="427.0" vgrow="SOMETIMES" />
+								<RowConstraints maxHeight="239.0" minHeight="0.0"
+									prefHeight="61.0" vgrow="SOMETIMES" />
+								<RowConstraints maxHeight="536.0"
+									minHeight="10.0" prefHeight="427.0" vgrow="SOMETIMES" />
 							</rowConstraints>
 							<children>
-								<JFXTreeTableView prefHeight="358.0" prefWidth="888.0" styleClass="table-view" stylesheets="@../resources/css/application.css" GridPane.rowIndex="1">
+								<JFXTreeTableView prefHeight="358.0"
+									prefWidth="888.0" styleClass="table-view"
+									stylesheets="@../resources/css/application.css"
+									GridPane.rowIndex="1">
 									<columns>
-										<TreeTableColumn editable="false" prefWidth="75.0" text="Código cita" />
-										<TreeTableColumn editable="false" prefWidth="75.0" text="Especialidad" />
-										<TreeTableColumn editable="false" prefWidth="75.0" text="Centro médico" />
-										<TreeTableColumn editable="false" prefWidth="75.0" text="Profesional" />
-										<TreeTableColumn editable="false" prefWidth="75.0" text="Fecha" />
-										<TreeTableColumn editable="false" prefWidth="75.0" text="Hora" />
-										<TreeTableColumn editable="false" prefWidth="75.0" text="Estado" />
+										<TreeTableColumn editable="false"
+											prefWidth="75.0" text="Código cita" />
+										<TreeTableColumn editable="false"
+											prefWidth="75.0" text="Especialidad" />
+										<TreeTableColumn editable="false"
+											prefWidth="75.0" text="Centro médico" />
+										<TreeTableColumn editable="false"
+											prefWidth="75.0" text="Profesional" />
+										<TreeTableColumn editable="false"
+											prefWidth="75.0" text="Fecha" />
+										<TreeTableColumn editable="false"
+											prefWidth="75.0" text="Hora" />
+										<TreeTableColumn editable="false"
+											prefWidth="75.0" text="Estado" />
 									</columns>
 									<columnResizePolicy>
-										<TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+										<TreeTableView
+											fx:constant="CONSTRAINED_RESIZE_POLICY" />
 									</columnResizePolicy>
 									<GridPane.margin>
 										<Insets />
@@ -87,239 +122,348 @@
 								</JFXTreeTableView>
 								<HBox prefHeight="44.0" prefWidth="940.0" spacing="10.0">
 									<children>
-										<FontAwesomeIconView fill="#4d1d4d" glyphName="SEARCH" size="25.5" />
-										<JFXTextField focusColor="#4d1d4d" labelFloat="true" prefHeight="25.0" prefWidth="248.0" promptText="Código de la cita">
+										<FontAwesomeIconView fill="#4d1d4d"
+											glyphName="SEARCH" size="25.5" />
+										<JFXTextField focusColor="#4d1d4d"
+											labelFloat="true" prefHeight="25.0" prefWidth="248.0"
+											promptText="Código de la cita">
 											<HBox.margin>
 												<Insets />
 											</HBox.margin>
 										</JFXTextField>
-										<JFXButton graphicTextGap="10.0" prefWidth="207.0" style="-fx-background-color: #4d1d4d;" text="Cancelar cita" textFill="WHITE">
+										<JFXButton graphicTextGap="10.0" prefWidth="207.0"
+											style="-fx-background-color: #4d1d4d;" text="Cancelar cita"
+											textFill="WHITE">
 											<HBox.margin>
 												<Insets />
 											</HBox.margin>
 											<graphic>
-												<FontAwesomeIconView fill="WHITE" glyphName="BAN" />
+												<FontAwesomeIconView fill="WHITE"
+													glyphName="BAN" />
 											</graphic>
 										</JFXButton>
 									</children>
 								</HBox>
 							</children>
 						</GridPane>
-						<Separator layoutY="208.0" prefHeight="3.0" prefWidth="988.0" />
+						<Separator layoutY="208.0" prefHeight="3.0"
+							prefWidth="988.0" />
 					</children>
 				</Pane>
-				<Pane fx:id="pnl_settings" prefHeight="788.0" prefWidth="988.0" styleClass="dashBoardRight" stylesheets="@../resources/css/application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+				<Pane fx:id="pnl_settings" prefHeight="788.0" prefWidth="988.0"
+					styleClass="dashBoardRight"
+					stylesheets="@../resources/css/application.css"
+					AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+					AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 					<children>
-						<AnchorPane layoutY="37.0" prefHeight="92.0" prefWidth="988.0" style="-fx-background-color: #4d1d4d;">
+						<AnchorPane layoutY="37.0" prefHeight="92.0"
+							prefWidth="988.0" style="-fx-background-color: #4d1d4d;">
 							<children>
-								<Label graphicTextGap="20.0" layoutX="87.0" layoutY="37.0" text="Configuración" textFill="WHITE">
+								<Label graphicTextGap="20.0" layoutX="87.0" layoutY="37.0"
+									text="Configuración" textFill="WHITE">
 									<font>
 										<Font name="Segoe UI Symbol" size="24.0" />
 									</font>
 								</Label>
-								<Label layoutX="87.0" layoutY="20.0" text="/ paciente / configuración" textFill="WHITE" />
+								<Label layoutX="87.0" layoutY="20.0"
+									text="/ paciente / configuración" textFill="WHITE" />
 							</children>
 						</AnchorPane>
-						<FontAwesomeIconView fill="#4d1d4d" glyphName="CLOSE" layoutX="965.0" layoutY="24.0" onMouseClicked="#close" size="16">
+						<FontAwesomeIconView fill="#4d1d4d"
+							glyphName="CLOSE" layoutX="965.0" layoutY="24.0"
+							onMouseClicked="#close" size="16">
 							<cursor>
 								<Cursor fx:constant="HAND" />
 							</cursor>
 						</FontAwesomeIconView>
-						<FontAwesomeIconView fill="#4d1d4d" glyphName="MINUS" layoutX="933.0" layoutY="24.0" onMouseClicked="#min" size="16" text="">
+						<FontAwesomeIconView fill="#4d1d4d"
+							glyphName="MINUS" layoutX="933.0" layoutY="24.0"
+							onMouseClicked="#min" size="16" text="">
 							<cursor>
 								<Cursor fx:constant="HAND" />
 							</cursor>
 						</FontAwesomeIconView>
-						<Label layoutX="310.0" layoutY="159.0" text="Modifica tus datos y/o credenciales para ingresar al sistema" textFill="#4d1d4d">
+						<Label layoutX="310.0" layoutY="159.0"
+							text="Modifica tus datos y/o credenciales para ingresar al sistema"
+							textFill="#4d1d4d">
 							<font>
 								<Font name="Segoe UI Symbol" size="14.0" />
 							</font>
 						</Label>
-						<GridPane layoutX="55.0" layoutY="240.0" prefHeight="488.0" prefWidth="888.0">
+						<GridPane layoutX="55.0" layoutY="240.0"
+							prefHeight="488.0" prefWidth="888.0">
 							<columnConstraints>
-								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES"
+									minWidth="10.0" prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES"
+									minWidth="10.0" prefWidth="100.0" />
 							</columnConstraints>
 							<rowConstraints>
-								<RowConstraints maxHeight="201.0" minHeight="5.0" prefHeight="60.0" vgrow="SOMETIMES" />
-								<RowConstraints maxHeight="464.0" minHeight="10.0" prefHeight="377.0" vgrow="SOMETIMES" />
-								<RowConstraints maxHeight="201.0" minHeight="5.0" prefHeight="60.0" vgrow="SOMETIMES" />
+								<RowConstraints maxHeight="201.0" minHeight="5.0"
+									prefHeight="60.0" vgrow="SOMETIMES" />
+								<RowConstraints maxHeight="464.0"
+									minHeight="10.0" prefHeight="377.0" vgrow="SOMETIMES" />
+								<RowConstraints maxHeight="201.0" minHeight="5.0"
+									prefHeight="60.0" vgrow="SOMETIMES" />
 							</rowConstraints>
 							<children>
-								<AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+								<AnchorPane prefHeight="200.0" prefWidth="200.0"
+									GridPane.rowIndex="1">
 									<children>
-										<Label layoutX="88.0" layoutY="244.0" text="* Fecha de nacimiento" textFill="#4d1d4d">
+										<Label layoutX="88.0" layoutY="244.0"
+											text="* Fecha de nacimiento" textFill="#4d1d4d">
 											<font>
 												<Font name="Segoe UI Symbol" size="12.0" />
 											</font>
 										</Label>
-										<FontAwesomeIconView fill="#4d1d4d" glyphName="CALENDAR" layoutX="46.0" layoutY="286.0" size="30" />
-										<JFXDatePicker defaultColor="#4d1d4d" layoutX="86.0" layoutY="263.0" prefHeight="25.0" prefWidth="314.0" />
-										<Label layoutX="85.0" layoutY="32.0" text="* Nombres" textFill="#4d1d4d">
+										<FontAwesomeIconView fill="#4d1d4d"
+											glyphName="CALENDAR" layoutX="46.0" layoutY="286.0" size="30" />
+										<JFXDatePicker defaultColor="#4d1d4d"
+											layoutX="86.0" layoutY="263.0" prefHeight="25.0"
+											prefWidth="314.0" />
+										<Label layoutX="85.0" layoutY="32.0" text="* Nombres"
+											textFill="#4d1d4d">
 											<font>
 												<Font name="Segoe UI Symbol" size="12.0" />
 											</font>
 										</Label>
-										<JFXTextField focusColor="#4d1d4d" layoutX="86.0" layoutY="51.0" prefHeight="25.0" prefWidth="314.0" />
-										<FontAwesomeIconView fill="#4d1d4d" glyphName="USER" layoutX="48.0" layoutY="74.0" size="30" />
-										<Label layoutX="85.0" layoutY="85.0" text="* Apellidos" textFill="#4d1d4d">
+										<JFXTextField focusColor="#4d1d4d" layoutX="86.0"
+											layoutY="51.0" prefHeight="25.0" prefWidth="314.0" />
+										<FontAwesomeIconView fill="#4d1d4d"
+											glyphName="USER" layoutX="48.0" layoutY="74.0" size="30" />
+										<Label layoutX="85.0" layoutY="85.0" text="* Apellidos"
+											textFill="#4d1d4d">
 											<font>
 												<Font name="Segoe UI Symbol" size="12.0" />
 											</font>
 										</Label>
-										<JFXTextField focusColor="#4d1d4d" layoutX="86.0" layoutY="104.0" prefHeight="25.0" prefWidth="314.0" />
-										<FontAwesomeIconView fill="#4d1d4d" glyphName="USER" layoutX="48.0" layoutY="127.0" size="30" />
-										<Label layoutX="88.0" layoutY="138.0" text="* Cédula" textFill="#4d1d4d">
+										<JFXTextField focusColor="#4d1d4d" layoutX="86.0"
+											layoutY="104.0" prefHeight="25.0" prefWidth="314.0" />
+										<FontAwesomeIconView fill="#4d1d4d"
+											glyphName="USER" layoutX="48.0" layoutY="127.0" size="30" />
+										<Label layoutX="88.0" layoutY="138.0" text="* Cédula"
+											textFill="#4d1d4d">
 											<font>
 												<Font name="Segoe UI Symbol" size="12.0" />
 											</font>
 										</Label>
-										<JFXTextField focusColor="#4d1d4d" layoutX="86.0" layoutY="157.0" prefHeight="25.0" prefWidth="314.0" />
-										<FontAwesomeIconView fill="#4d1d4d" glyphName="CREDIT_CARD" layoutX="43.0" layoutY="180.0" size="30" />
-										<Label layoutX="88.0" layoutY="191.0" text="* Teléfono" textFill="#4d1d4d">
+										<JFXTextField focusColor="#4d1d4d" layoutX="86.0"
+											layoutY="157.0" prefHeight="25.0" prefWidth="314.0" />
+										<FontAwesomeIconView fill="#4d1d4d"
+											glyphName="CREDIT_CARD" layoutX="43.0" layoutY="180.0"
+											size="30" />
+										<Label layoutX="88.0" layoutY="191.0" text="* Teléfono"
+											textFill="#4d1d4d">
 											<font>
 												<Font name="Segoe UI Symbol" size="12.0" />
 											</font>
 										</Label>
-										<JFXTextField focusColor="#4d1d4d" layoutX="86.0" layoutY="210.0" prefHeight="25.0" prefWidth="314.0" />
-										<FontAwesomeIconView fill="#4d1d4d" glyphName="PHONE_SQUARE" layoutX="47.0" layoutY="233.0" size="30" />
-										<Label layoutX="88.0" layoutY="297.0" text="* Dirección" textFill="#4d1d4d">
+										<JFXTextField focusColor="#4d1d4d" layoutX="86.0"
+											layoutY="210.0" prefHeight="25.0" prefWidth="314.0" />
+										<FontAwesomeIconView fill="#4d1d4d"
+											glyphName="PHONE_SQUARE" layoutX="47.0" layoutY="233.0"
+											size="30" />
+										<Label layoutX="88.0" layoutY="297.0" text="* Dirección"
+											textFill="#4d1d4d">
 											<font>
 												<Font name="Segoe UI Symbol" size="12.0" />
 											</font>
 										</Label>
-										<JFXTextField focusColor="#4d1d4d" layoutX="86.0" layoutY="316.0" prefHeight="25.0" prefWidth="314.0" />
-										<FontAwesomeIconView fill="#4d1d4d" glyphName="MAP" layoutX="42.0" layoutY="339.0" size="30" />
+										<JFXTextField focusColor="#4d1d4d" layoutX="86.0"
+											layoutY="316.0" prefHeight="25.0" prefWidth="314.0" />
+										<FontAwesomeIconView fill="#4d1d4d"
+											glyphName="MAP" layoutX="42.0" layoutY="339.0" size="30" />
 									</children>
 								</AnchorPane>
-								<AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #4d1d4d;">
+								<AnchorPane prefHeight="200.0" prefWidth="200.0"
+									style="-fx-background-color: #4d1d4d;">
 									<children>
-										<Label layoutX="192.0" layoutY="19.0" text="Mis datos" textFill="WHITE">
+										<Label layoutX="192.0" layoutY="19.0" text="Mis datos"
+											textFill="WHITE">
 											<font>
 												<Font name="Segoe UI Symbol" size="14.0" />
 											</font>
 										</Label>
 									</children>
 								</AnchorPane>
-								<AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #4d1d4d;" GridPane.columnIndex="1">
+								<AnchorPane prefHeight="200.0" prefWidth="200.0"
+									style="-fx-background-color: #4d1d4d;" GridPane.columnIndex="1">
 									<children>
-										<Label layoutX="171.0" layoutY="19.0" text="Mis credenciales" textFill="WHITE">
+										<Label layoutX="171.0" layoutY="19.0"
+											text="Mis credenciales" textFill="WHITE">
 											<font>
 												<Font name="Segoe UI Symbol" size="14.0" />
 											</font>
 										</Label>
 									</children>
 								</AnchorPane>
-								<AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+								<AnchorPane prefHeight="200.0" prefWidth="200.0"
+									GridPane.columnIndex="1" GridPane.rowIndex="1">
 									<children>
-										<JFXTextField focusColor="#4d1d4d" layoutX="84.0" layoutY="51.0" prefHeight="25.0" prefWidth="314.0" />
-										<JFXTextField focusColor="#4d1d4d" layoutX="84.0" layoutY="104.0" prefHeight="25.0" prefWidth="314.0" />
-										<Label layoutX="84.0" layoutY="32.0" text="* Email" textFill="#4d1d4d">
+										<JFXTextField focusColor="#4d1d4d" layoutX="84.0"
+											layoutY="51.0" prefHeight="25.0" prefWidth="314.0" />
+										<JFXTextField focusColor="#4d1d4d" layoutX="84.0"
+											layoutY="104.0" prefHeight="25.0" prefWidth="314.0" />
+										<Label layoutX="84.0" layoutY="32.0" text="* Email"
+											textFill="#4d1d4d">
 											<font>
 												<Font name="Segoe UI Symbol" size="12.0" />
 											</font>
 										</Label>
-										<Label layoutX="84.0" layoutY="85.0" text="* Contraseña" textFill="#4d1d4d">
+										<Label layoutX="84.0" layoutY="85.0" text="* Contraseña"
+											textFill="#4d1d4d">
 											<font>
 												<Font name="Segoe UI Symbol" size="12.0" />
 											</font>
 										</Label>
-										<JFXTextField focusColor="#4d1d4d" layoutX="82.0" layoutY="157.0" prefHeight="25.0" prefWidth="314.0" />
-										<Label layoutX="84.0" layoutY="138.0" text="* Nueva contraseña" textFill="#4d1d4d">
+										<JFXTextField focusColor="#4d1d4d" layoutX="82.0"
+											layoutY="157.0" prefHeight="25.0" prefWidth="314.0" />
+										<Label layoutX="84.0" layoutY="138.0"
+											text="* Nueva contraseña" textFill="#4d1d4d">
 											<font>
 												<Font name="Segoe UI Symbol" size="12.0" />
 											</font>
 										</Label>
-										<FontAwesomeIconView fill="#4d1d4d" glyphName="AT" layoutX="46.0" layoutY="75.0" size="30" />
-										<FontAwesomeIconView fill="#4d1d4d" glyphName="LOCK" layoutX="49.0" layoutY="128.0" size="30" />
-										<FontAwesomeIconView fill="#4d1d4d" glyphName="UNLOCK_ALT" layoutX="49.0" layoutY="181.0" size="30" />
+										<FontAwesomeIconView fill="#4d1d4d"
+											glyphName="AT" layoutX="46.0" layoutY="75.0" size="30" />
+										<FontAwesomeIconView fill="#4d1d4d"
+											glyphName="LOCK" layoutX="49.0" layoutY="128.0" size="30" />
+										<FontAwesomeIconView fill="#4d1d4d"
+											glyphName="UNLOCK_ALT" layoutX="49.0" layoutY="181.0"
+											size="30" />
 									</children>
 								</AnchorPane>
-								<AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+								<AnchorPane prefHeight="200.0" prefWidth="200.0"
+									GridPane.rowIndex="2">
 									<children>
-										<JFXButton graphicTextGap="10.0" layoutX="119.0" layoutY="16.0" prefHeight="25.0" prefWidth="207.0" style="-fx-background-color: #4d1d4d;" text="Guardar" textFill="WHITE">
+										<JFXButton graphicTextGap="10.0" layoutX="119.0"
+											layoutY="16.0" prefHeight="25.0" prefWidth="207.0"
+											style="-fx-background-color: #4d1d4d;" text="Guardar"
+											textFill="WHITE">
 											<graphic>
-												<FontAwesomeIconView fill="WHITE" glyphName="SAVE" />
+												<FontAwesomeIconView fill="WHITE"
+													glyphName="SAVE" />
 											</graphic>
 										</JFXButton>
 									</children>
 								</AnchorPane>
-								<AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+								<AnchorPane prefHeight="200.0" prefWidth="200.0"
+									GridPane.columnIndex="1" GridPane.rowIndex="2">
 									<children>
-										<JFXButton graphicTextGap="10.0" layoutX="119.0" layoutY="16.0" prefHeight="25.0" prefWidth="207.0" style="-fx-background-color: #4d1d4d;" text="Cambiar contraseña" textFill="WHITE">
+										<JFXButton graphicTextGap="10.0" layoutX="119.0"
+											layoutY="16.0" prefHeight="25.0" prefWidth="207.0"
+											style="-fx-background-color: #4d1d4d;"
+											text="Cambiar contraseña" textFill="WHITE">
 											<graphic>
-												<FontAwesomeIconView fill="WHITE" glyphName="LOCK" />
+												<FontAwesomeIconView fill="WHITE"
+													glyphName="LOCK" />
 											</graphic>
 										</JFXButton>
 									</children>
 								</AnchorPane>
 							</children>
 						</GridPane>
-						<Separator layoutX="496.0" layoutY="241.0" orientation="VERTICAL" prefHeight="505.0" prefWidth="16.0" />
-						<Separator layoutX="48.0" layoutY="240.0" orientation="VERTICAL" prefHeight="505.0" prefWidth="16.0" />
-						<Separator layoutX="937.0" layoutY="240.0" orientation="VERTICAL" prefHeight="505.0" prefWidth="16.0" />
-						<Separator layoutX="55.0" layoutY="739.0" prefHeight="15.0" prefWidth="888.0" />
-						<Separator layoutY="208.0" prefHeight="3.0" prefWidth="988.0" />
+						<Separator layoutX="496.0" layoutY="241.0"
+							orientation="VERTICAL" prefHeight="505.0" prefWidth="16.0" />
+						<Separator layoutX="48.0" layoutY="240.0"
+							orientation="VERTICAL" prefHeight="505.0" prefWidth="16.0" />
+						<Separator layoutX="937.0" layoutY="240.0"
+							orientation="VERTICAL" prefHeight="505.0" prefWidth="16.0" />
+						<Separator layoutX="55.0" layoutY="739.0"
+							prefHeight="15.0" prefWidth="888.0" />
+						<Separator layoutY="208.0" prefHeight="3.0"
+							prefWidth="988.0" />
 					</children>
 				</Pane>
-				<Pane fx:id="pnl_whoweare" prefHeight="788.0" prefWidth="988.0" styleClass="dashBoardRight" stylesheets="@../resources/css/application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+				<Pane fx:id="pnl_whoweare" prefHeight="788.0" prefWidth="988.0"
+					styleClass="dashBoardRight"
+					stylesheets="@../resources/css/application.css"
+					AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+					AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 					<children>
-						<AnchorPane layoutY="37.0" prefHeight="92.0" prefWidth="988.0" style="-fx-background-color: #4d1d4d;">
+						<AnchorPane layoutY="37.0" prefHeight="92.0"
+							prefWidth="988.0" style="-fx-background-color: #4d1d4d;">
 							<children>
-								<Label graphicTextGap="20.0" layoutX="87.0" layoutY="37.0" text="Quienes somos" textFill="WHITE">
+								<Label graphicTextGap="20.0" layoutX="87.0" layoutY="37.0"
+									text="Quienes somos" textFill="WHITE">
 									<font>
 										<Font name="Segoe UI Symbol" size="24.0" />
 									</font>
 								</Label>
-								<Label layoutX="87.0" layoutY="20.0" text="/ paciente / quienes somos" textFill="WHITE" />
+								<Label layoutX="87.0" layoutY="20.0"
+									text="/ paciente / quienes somos" textFill="WHITE" />
 							</children>
 						</AnchorPane>
-						<Label layoutX="189.0" layoutY="159.0" text="Conoce mas acerca de quienes somos, los servicios que tenemos a tus disposicion y nuestras sedes" textFill="#4d1d4d">
+						<Label layoutX="189.0" layoutY="159.0"
+							text="Conoce mas acerca de quienes somos, los servicios que tenemos a tus disposicion y nuestras sedes"
+							textFill="#4d1d4d">
 							<font>
 								<Font name="Segoe UI Symbol" size="14.0" />
 							</font>
 						</Label>
-						<FontAwesomeIconView fill="#4d1d4d" glyphName="CLOSE" layoutX="965.0" layoutY="24.0" onMouseClicked="#close" size="16">
+						<FontAwesomeIconView fill="#4d1d4d"
+							glyphName="CLOSE" layoutX="965.0" layoutY="24.0"
+							onMouseClicked="#close" size="16">
 							<cursor>
 								<Cursor fx:constant="HAND" />
 							</cursor>
 						</FontAwesomeIconView>
-						<FontAwesomeIconView fill="#4d1d4d" glyphName="MINUS" layoutX="933.0" layoutY="24.0" onMouseClicked="#min" size="16" text="">
+						<FontAwesomeIconView fill="#4d1d4d"
+							glyphName="MINUS" layoutX="933.0" layoutY="24.0"
+							onMouseClicked="#min" size="16" text="">
 							<cursor>
 								<Cursor fx:constant="HAND" />
 							</cursor>
 						</FontAwesomeIconView>
-						<Separator layoutY="208.0" prefHeight="3.0" prefWidth="988.0" />
-						<AnchorPane layoutX="50.0" layoutY="243.0" prefHeight="505.0" prefWidth="888.0">
+						<Separator layoutY="208.0" prefHeight="3.0"
+							prefWidth="988.0" />
+						<AnchorPane layoutX="50.0" layoutY="243.0"
+							prefHeight="505.0" prefWidth="888.0">
 							<children>
-								<JFXTabPane layoutX="-2.0" prefHeight="505.0" prefWidth="888.0">
+								<JFXTabPane layoutX="-2.0" prefHeight="505.0"
+									prefWidth="888.0">
 									<tabs>
-										<Tab style="-fx-background-color: #4d1d4d;" text="Healingtouch">
+										<Tab style="-fx-background-color: #4d1d4d;"
+											text="Healingtouch">
 											<content>
-												<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+												<AnchorPane minHeight="0.0" minWidth="0.0"
+													prefHeight="180.0" prefWidth="200.0">
 													<children>
 														<GridPane prefHeight="470.0" prefWidth="888.0">
 															<columnConstraints>
-																<ColumnConstraints hgrow="SOMETIMES" maxWidth="438.0" minWidth="10.0" prefWidth="352.0" />
-																<ColumnConstraints hgrow="SOMETIMES" maxWidth="619.0" minWidth="10.0" prefWidth="536.0" />
+																<ColumnConstraints hgrow="SOMETIMES"
+																	maxWidth="438.0" minWidth="10.0" prefWidth="352.0" />
+																<ColumnConstraints hgrow="SOMETIMES"
+																	maxWidth="619.0" minWidth="10.0" prefWidth="536.0" />
 															</columnConstraints>
 															<rowConstraints>
-																<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+																<RowConstraints minHeight="10.0"
+																	prefHeight="30.0" vgrow="SOMETIMES" />
 															</rowConstraints>
 															<children>
-																<AnchorPane prefHeight="200.0" prefWidth="200.0">
+																<AnchorPane prefHeight="200.0"
+																	prefWidth="200.0">
 																	<children>
-																		<ImageView fitHeight="206.0" fitWidth="192.0" layoutX="80.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+																		<ImageView fitHeight="206.0"
+																			fitWidth="192.0" layoutX="80.0" layoutY="139.0"
+																			pickOnBounds="true" preserveRatio="true"
+																			smooth="false">
 																			<image>
-																				<Image url="@../resources/images/heart-beat.png" />
+																				<Image
+																					url="@../resources/images/heart-beat.png" />
 																			</image>
 																		</ImageView>
 																	</children>
 																</AnchorPane>
-																<AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+																<AnchorPane prefHeight="200.0"
+																	prefWidth="200.0" GridPane.columnIndex="1">
 																	<children>
-																		<Text layoutX="70.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is Lorem Ipsum?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." wrappingWidth="395.00001135468483" />
-																		<Label layoutX="70.0" layoutY="133.0" text="Healingtouch" textFill="#4d1d4d">
+																		<Text layoutX="70.0" layoutY="205.0"
+																			strokeType="OUTSIDE" strokeWidth="0.0"
+																			text="What is Lorem Ipsum?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+																			wrappingWidth="395.00001135468483" />
+																		<Label layoutX="70.0" layoutY="133.0"
+																			text="Healingtouch" textFill="#4d1d4d">
 																			<font>
 																				<Font size="36.0" />
 																			</font>
@@ -332,32 +476,46 @@
 												</AnchorPane>
 											</content>
 										</Tab>
-										<Tab style="-fx-background-color: #4d1d4d;" text="Nuestros servicios">
+										<Tab style="-fx-background-color: #4d1d4d;"
+											text="Nuestros servicios">
 											<content>
-												<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+												<AnchorPane minHeight="0.0" minWidth="0.0"
+													prefHeight="180.0" prefWidth="200.0">
 													<children>
 														<GridPane prefHeight="470.0" prefWidth="888.0">
 															<columnConstraints>
-																<ColumnConstraints hgrow="SOMETIMES" maxWidth="438.0" minWidth="10.0" prefWidth="352.0" />
-																<ColumnConstraints hgrow="SOMETIMES" maxWidth="619.0" minWidth="10.0" prefWidth="536.0" />
+																<ColumnConstraints hgrow="SOMETIMES"
+																	maxWidth="438.0" minWidth="10.0" prefWidth="352.0" />
+																<ColumnConstraints hgrow="SOMETIMES"
+																	maxWidth="619.0" minWidth="10.0" prefWidth="536.0" />
 															</columnConstraints>
 															<rowConstraints>
-																<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+																<RowConstraints minHeight="10.0"
+																	prefHeight="30.0" vgrow="SOMETIMES" />
 															</rowConstraints>
 															<children>
-																<AnchorPane prefHeight="200.0" prefWidth="200.0">
+																<AnchorPane prefHeight="200.0"
+																	prefWidth="200.0">
 																	<children>
-																		<ImageView fitHeight="206.0" fitWidth="192.0" layoutX="80.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+																		<ImageView fitHeight="206.0"
+																			fitWidth="192.0" layoutX="80.0" layoutY="139.0"
+																			pickOnBounds="true" preserveRatio="true"
+																			smooth="false">
 																			<image>
 																				<Image url="@../resources/images/doctor.png" />
 																			</image>
 																		</ImageView>
 																	</children>
 																</AnchorPane>
-																<AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+																<AnchorPane prefHeight="200.0"
+																	prefWidth="200.0" GridPane.columnIndex="1">
 																	<children>
-																		<Text layoutX="70.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aliquam tincidunt mauris eu risus.Vestibulum auctor dapibus neque.Nunc dignissim risus id metus.Cras ornare tristique elit.Vivamus vestibulum ntulla nec ante.Praesent placerat risus quis eros.Fusce pellentesque suscipit nibh.Integer vitae libero ac risus egestas placerat.Vestibulum commodo felis quis tortor.Ut aliquam sollicitudin leo.Cras iaculis ultricies nulla.Donec quis dui at dolor tempor interdum." wrappingWidth="395.00001135468483" />
-																		<Label layoutX="70.0" layoutY="133.0" text="Nuestros servicios" textFill="#4d1d4d">
+																		<Text layoutX="70.0" layoutY="205.0"
+																			strokeType="OUTSIDE" strokeWidth="0.0"
+																			text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aliquam tincidunt mauris eu risus.Vestibulum auctor dapibus neque.Nunc dignissim risus id metus.Cras ornare tristique elit.Vivamus vestibulum ntulla nec ante.Praesent placerat risus quis eros.Fusce pellentesque suscipit nibh.Integer vitae libero ac risus egestas placerat.Vestibulum commodo felis quis tortor.Ut aliquam sollicitudin leo.Cras iaculis ultricies nulla.Donec quis dui at dolor tempor interdum."
+																			wrappingWidth="395.00001135468483" />
+																		<Label layoutX="70.0" layoutY="133.0"
+																			text="Nuestros servicios" textFill="#4d1d4d">
 																			<font>
 																				<Font size="36.0" />
 																			</font>
@@ -370,32 +528,47 @@
 												</AnchorPane>
 											</content>
 										</Tab>
-										<Tab style="-fx-background-color: #4d1d4d;" text="Nuestras sedes">
+										<Tab style="-fx-background-color: #4d1d4d;"
+											text="Nuestras sedes">
 											<content>
-												<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+												<AnchorPane minHeight="0.0" minWidth="0.0"
+													prefHeight="180.0" prefWidth="200.0">
 													<children>
 														<GridPane prefHeight="470.0" prefWidth="888.0">
 															<columnConstraints>
-																<ColumnConstraints hgrow="SOMETIMES" maxWidth="438.0" minWidth="10.0" prefWidth="352.0" />
-																<ColumnConstraints hgrow="SOMETIMES" maxWidth="619.0" minWidth="10.0" prefWidth="536.0" />
+																<ColumnConstraints hgrow="SOMETIMES"
+																	maxWidth="438.0" minWidth="10.0" prefWidth="352.0" />
+																<ColumnConstraints hgrow="SOMETIMES"
+																	maxWidth="619.0" minWidth="10.0" prefWidth="536.0" />
 															</columnConstraints>
 															<rowConstraints>
-																<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+																<RowConstraints minHeight="10.0"
+																	prefHeight="30.0" vgrow="SOMETIMES" />
 															</rowConstraints>
 															<children>
-																<AnchorPane prefHeight="200.0" prefWidth="200.0">
+																<AnchorPane prefHeight="200.0"
+																	prefWidth="200.0">
 																	<children>
-																		<ImageView fitHeight="206.0" fitWidth="192.0" layoutX="80.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+																		<ImageView fitHeight="206.0"
+																			fitWidth="192.0" layoutX="80.0" layoutY="139.0"
+																			pickOnBounds="true" preserveRatio="true"
+																			smooth="false">
 																			<image>
-																				<Image url="@../resources/images/placeholder.png" />
+																				<Image
+																					url="@../resources/images/placeholder.png" />
 																			</image>
 																		</ImageView>
 																	</children>
 																</AnchorPane>
-																<AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+																<AnchorPane prefHeight="200.0"
+																	prefWidth="200.0" GridPane.columnIndex="1">
 																	<children>
-																		<Text layoutX="70.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is Lorem Ipsum?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." wrappingWidth="395.00001135468483" />
-																		<Label layoutX="70.0" layoutY="133.0" text="Nuestras sedes" textFill="#4d1d4d">
+																		<Text layoutX="70.0" layoutY="205.0"
+																			strokeType="OUTSIDE" strokeWidth="0.0"
+																			text="What is Lorem Ipsum?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+																			wrappingWidth="395.00001135468483" />
+																		<Label layoutX="70.0" layoutY="133.0"
+																			text="Nuestras sedes" textFill="#4d1d4d">
 																			<font>
 																				<Font size="36.0" />
 																			</font>
@@ -414,23 +587,37 @@
 						</AnchorPane>
 					</children>
 				</Pane>
-				<Pane fx:id="pnl_book_appointment" prefHeight="788.0" prefWidth="988.0" styleClass="dashBoardRight" stylesheets="@../resources/css/application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+				<Pane fx:id="pnl_book_appointment" prefHeight="788.0"
+					prefWidth="988.0" styleClass="dashBoardRight"
+					stylesheets="@../resources/css/application.css"
+					AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+					AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 					<children>
-						<AnchorPane layoutY="37.0" prefHeight="92.0" prefWidth="988.0" style="-fx-background-color: #4d1d4d;">
+						<AnchorPane layoutY="37.0" prefHeight="92.0"
+							prefWidth="988.0" style="-fx-background-color: #4d1d4d;">
 							<children>
-								<Label graphicTextGap="20.0" layoutX="87.0" layoutY="37.0" text="Agenda tus citas" textFill="WHITE">
+								<Label graphicTextGap="20.0" layoutX="87.0" layoutY="37.0"
+									text="Agenda tus citas" textFill="WHITE">
 									<font>
 										<Font name="Segoe UI Symbol" size="24.0" />
 									</font>
 								</Label>
-								<Label layoutX="87.0" layoutY="20.0" text="/ paciente / citas" textFill="WHITE" />
+								<Label layoutX="87.0" layoutY="20.0"
+									text="/ paciente / citas" textFill="WHITE" />
 							</children>
 						</AnchorPane>
-						<HBox layoutX="172.0" layoutY="208.0" prefHeight="143.0" prefWidth="644.0">
+						<HBox layoutX="172.0" layoutY="208.0" prefHeight="143.0"
+							prefWidth="644.0">
 							<children>
-								<JFXButton alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" prefHeight="161.0" prefWidth="161.0" styleClass="specialitys" stylesheets="@../resources/css/application.css" text="Medicina general" textAlignment="CENTER" textFill="#4d1d4d">
+								<JFXButton alignment="CENTER" contentDisplay="TOP"
+									graphicTextGap="15.0" prefHeight="161.0" prefWidth="161.0"
+									styleClass="specialitys"
+									stylesheets="@../resources/css/application.css"
+									text="Medicina general" textAlignment="CENTER"
+									textFill="#4d1d4d">
 									<graphic>
-										<ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" smooth="false">
+										<ImageView fitHeight="60.0" fitWidth="60.0"
+											pickOnBounds="true" smooth="false">
 											<image>
 												<Image url="@../resources/images/general.png" />
 											</image>
@@ -443,9 +630,14 @@
 										<Cursor fx:constant="HAND" />
 									</cursor>
 								</JFXButton>
-								<JFXButton alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" prefHeight="161.0" prefWidth="161.0" styleClass="specialitys" stylesheets="@../resources/css/application.css" text="Odontología" textAlignment="CENTER" textFill="#4d1d4d">
+								<JFXButton alignment="CENTER" contentDisplay="TOP"
+									graphicTextGap="15.0" prefHeight="161.0" prefWidth="161.0"
+									styleClass="specialitys"
+									stylesheets="@../resources/css/application.css"
+									text="Odontología" textAlignment="CENTER" textFill="#4d1d4d">
 									<graphic>
-										<ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" smooth="false">
+										<ImageView fitHeight="60.0" fitWidth="60.0"
+											pickOnBounds="true" smooth="false">
 											<image>
 												<Image url="@../resources/images/odontologia.png" />
 											</image>
@@ -458,9 +650,14 @@
 										<Cursor fx:constant="HAND" />
 									</cursor>
 								</JFXButton>
-								<JFXButton alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" prefHeight="161.0" prefWidth="161.0" styleClass="specialitys" stylesheets="@../resources/css/application.css" text="Urología" textAlignment="CENTER" textFill="#4d1d4d">
+								<JFXButton alignment="CENTER" contentDisplay="TOP"
+									graphicTextGap="15.0" prefHeight="161.0" prefWidth="161.0"
+									styleClass="specialitys"
+									stylesheets="@../resources/css/application.css" text="Urología"
+									textAlignment="CENTER" textFill="#4d1d4d">
 									<graphic>
-										<ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" smooth="false">
+										<ImageView fitHeight="60.0" fitWidth="60.0"
+											pickOnBounds="true" smooth="false">
 											<image>
 												<Image url="@../resources/images/urologia.png" />
 											</image>
@@ -473,9 +670,14 @@
 										<Cursor fx:constant="HAND" />
 									</cursor>
 								</JFXButton>
-								<JFXButton alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" prefHeight="161.0" prefWidth="161.0" styleClass="specialitys" stylesheets="@../resources/css/application.css" text="Ginecología" textAlignment="CENTER" textFill="#4d1d4d">
+								<JFXButton alignment="CENTER" contentDisplay="TOP"
+									graphicTextGap="15.0" prefHeight="161.0" prefWidth="161.0"
+									styleClass="specialitys"
+									stylesheets="@../resources/css/application.css"
+									text="Ginecología" textAlignment="CENTER" textFill="#4d1d4d">
 									<graphic>
-										<ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" smooth="false">
+										<ImageView fitHeight="60.0" fitWidth="60.0"
+											pickOnBounds="true" smooth="false">
 											<image>
 												<Image url="@../resources/images/ginecologia.png" />
 											</image>
@@ -490,48 +692,82 @@
 								</JFXButton>
 							</children>
 						</HBox>
-						<Label layoutX="345.0" layoutY="159.0" text="Selecciona una especialidad y llena el formulario" textFill="#4d1d4d">
+						<Label layoutX="345.0" layoutY="159.0"
+							text="Selecciona una especialidad y llena el formulario"
+							textFill="#4d1d4d">
 							<font>
 								<Font name="Segoe UI Symbol" size="14.0" />
 							</font>
 						</Label>
-						<FontAwesomeIconView fill="#4d1d4d" glyphName="CLOSE" layoutX="965.0" layoutY="24.0" onMouseClicked="#close" size="16">
+						<FontAwesomeIconView fill="#4d1d4d"
+							glyphName="CLOSE" layoutX="965.0" layoutY="24.0"
+							onMouseClicked="#close" size="16">
 							<cursor>
 								<Cursor fx:constant="HAND" />
 							</cursor>
 						</FontAwesomeIconView>
-						<FontAwesomeIconView fill="#4d1d4d" glyphName="MINUS" layoutX="933.0" layoutY="24.0" onMouseClicked="#min" size="16" text="">
+						<FontAwesomeIconView fill="#4d1d4d"
+							glyphName="MINUS" layoutX="933.0" layoutY="24.0"
+							onMouseClicked="#min" size="16" text="">
 							<cursor>
 								<Cursor fx:constant="HAND" />
 							</cursor>
 						</FontAwesomeIconView>
-						<Separator layoutY="208.0" prefHeight="3.0" prefWidth="988.0" />
-						<AnchorPane layoutX="50.0" layoutY="360.0" prefHeight="414.0" prefWidth="888.0">
+						<Separator layoutY="208.0" prefHeight="3.0"
+							prefWidth="988.0" />
+						<AnchorPane layoutX="50.0" layoutY="360.0"
+							prefHeight="414.0" prefWidth="888.0">
 							<children>
-								<JFXComboBox focusColor="#4d1d4d" labelFloat="true" layoutX="12.0" layoutY="14.0" prefHeight="25.0" prefWidth="865.0" promptText="Selecciona un centro médico" />
-								<JFXComboBox focusColor="#4d1d4d" labelFloat="true" layoutX="12.0" layoutY="64.0" prefHeight="25.0" prefWidth="865.0" promptText="Selecciona un profesional" />
-								<JFXDatePicker defaultColor="#4d1d4d" editable="false" layoutX="12.0" layoutY="115.0" prefHeight="25.0" prefWidth="865.0" promptText="Fecha de tu cita" />
-								<JFXTimePicker defaultColor="#4d1d4d" layoutX="12.0" layoutY="165.0" prefHeight="25.0" prefWidth="865.0" promptText="Hora de tu cita" />
-								<JFXButton graphicTextGap="10.0" layoutX="14.0" layoutY="365.0" prefWidth="207.0" style="-fx-background-color: #4d1d4d;" text="Agendar cita" textFill="WHITE">
+								<JFXComboBox focusColor="#4d1d4d" labelFloat="true"
+									layoutX="12.0" layoutY="14.0" prefHeight="25.0"
+									prefWidth="865.0" promptText="Selecciona un centro médico" />
+								<JFXComboBox focusColor="#4d1d4d" labelFloat="true"
+									layoutX="12.0" layoutY="64.0" prefHeight="25.0"
+									prefWidth="865.0" promptText="Selecciona un profesional" />
+								<JFXDatePicker defaultColor="#4d1d4d"
+									editable="false" layoutX="12.0" layoutY="115.0"
+									prefHeight="25.0" prefWidth="865.0"
+									promptText="Fecha de tu cita" />
+								<JFXTimePicker defaultColor="#4d1d4d"
+									layoutX="12.0" layoutY="165.0" prefHeight="25.0"
+									prefWidth="865.0" promptText="Hora de tu cita" />
+								<JFXButton graphicTextGap="10.0" layoutX="14.0"
+									layoutY="365.0" prefWidth="207.0"
+									style="-fx-background-color: #4d1d4d;" text="Agendar cita"
+									textFill="WHITE">
 									<graphic>
-										<FontAwesomeIconView fill="WHITE" glyphName="CHECK" />
+										<FontAwesomeIconView fill="WHITE"
+											glyphName="CHECK" />
 									</graphic>
 								</JFXButton>
-								<JFXTextArea focusColor="#4d1d4d" labelFloat="true" layoutX="12.0" layoutY="235.0" prefHeight="102.0" prefWidth="865.0" promptText="Proporciona cualquier información importante para el profesional" />
+								<JFXTextArea focusColor="#4d1d4d" labelFloat="true"
+									layoutX="12.0" layoutY="235.0" prefHeight="102.0"
+									prefWidth="865.0"
+									promptText="Proporciona cualquier información importante para el profesional" />
 							</children>
 						</AnchorPane>
 					</children>
 				</Pane>
 			</children>
 		</AnchorPane>
-		<AnchorPane prefHeight="788.0" prefWidth="301.0" styleClass="dashBoardLeft" stylesheets="@../resources/css/application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+		<AnchorPane prefHeight="788.0" prefWidth="301.0"
+			styleClass="dashBoardLeft"
+			stylesheets="@../resources/css/application.css"
+			AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+			AnchorPane.topAnchor="0.0">
 			<children>
-				<ImageView fitHeight="129.0" fitWidth="301.0" pickOnBounds="true" smooth="false">
+				<ImageView fitHeight="129.0" fitWidth="301.0"
+					pickOnBounds="true" smooth="false">
 					<image>
 						<Image url="@../resources/images/logo.png" />
 					</image>
 				</ImageView>
-				<JFXButton fx:id="btnMenu_book_appointment" graphicTextGap="35.0" layoutY="137.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#handleButtonAction" prefHeight="80.0" prefWidth="301.0" styleClass="menuLeft" stylesheets="@../resources/css/application.css" text="Agenda tus citas" textFill="WHITE">
+				<JFXButton fx:id="btnMenu_book_appointment"
+					graphicTextGap="35.0" layoutY="137.0"
+					nodeOrientation="LEFT_TO_RIGHT" onAction="#handleButtonAction"
+					prefHeight="80.0" prefWidth="301.0" styleClass="menuLeft"
+					stylesheets="@../resources/css/application.css"
+					text="Agenda tus citas" textFill="WHITE">
 					<font>
 						<Font name="Segoe UI Symbol" size="16.0" />
 					</font>
@@ -539,7 +775,12 @@
 						<Cursor fx:constant="HAND" />
 					</cursor>
 				</JFXButton>
-				<JFXButton fx:id="btnMenu_search_appointment" graphicTextGap="35.0" layoutY="217.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#handleButtonAction" prefHeight="80.0" prefWidth="301.0" styleClass="menuLeft" stylesheets="@../resources/css/application.css" text="Consulta tus citas" textFill="WHITE">
+				<JFXButton fx:id="btnMenu_search_appointment"
+					graphicTextGap="35.0" layoutY="217.0"
+					nodeOrientation="LEFT_TO_RIGHT" onAction="#handleButtonAction"
+					prefHeight="80.0" prefWidth="301.0" styleClass="menuLeft"
+					stylesheets="@../resources/css/application.css"
+					text="Consulta tus citas" textFill="WHITE">
 					<font>
 						<Font name="Segoe UI Symbol" size="16.0" />
 					</font>
@@ -547,7 +788,12 @@
 						<Cursor fx:constant="HAND" />
 					</cursor>
 				</JFXButton>
-				<JFXButton fx:id="btnMenu_settings" graphicTextGap="35.0" layoutY="297.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#handleButtonAction" prefHeight="80.0" prefWidth="301.0" styleClass="menuLeft" stylesheets="@../resources/css/application.css" text="Configuración" textFill="WHITE">
+				<JFXButton fx:id="btnMenu_settings" graphicTextGap="35.0"
+					layoutY="297.0" nodeOrientation="LEFT_TO_RIGHT"
+					onAction="#handleButtonAction" prefHeight="80.0" prefWidth="301.0"
+					styleClass="menuLeft"
+					stylesheets="@../resources/css/application.css"
+					text="Configuración" textFill="WHITE">
 					<font>
 						<Font name="Segoe UI Symbol" size="16.0" />
 					</font>
@@ -555,7 +801,12 @@
 						<Cursor fx:constant="HAND" />
 					</cursor>
 				</JFXButton>
-				<JFXButton fx:id="btnMenu_whoweare" graphicTextGap="35.0" layoutY="377.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#handleButtonAction" prefHeight="80.0" prefWidth="301.0" styleClass="menuLeft" stylesheets="@../resources/css/application.css" text="Quienes somos" textFill="WHITE">
+				<JFXButton fx:id="btnMenu_whoweare" graphicTextGap="35.0"
+					layoutY="377.0" nodeOrientation="LEFT_TO_RIGHT"
+					onAction="#handleButtonAction" prefHeight="80.0" prefWidth="301.0"
+					styleClass="menuLeft"
+					stylesheets="@../resources/css/application.css"
+					text="Quienes somos" textFill="WHITE">
 					<font>
 						<Font name="Segoe UI Symbol" size="16.0" />
 					</font>
@@ -563,27 +814,35 @@
 						<Cursor fx:constant="HAND" />
 					</cursor>
 				</JFXButton>
-				<FontAwesomeIconView fill="WHITE" glyphName="CALENDAR" layoutX="48.0" layoutY="187.0" size="30">
+				<FontAwesomeIconView fill="WHITE"
+					glyphName="CALENDAR" layoutX="48.0" layoutY="187.0" size="30">
 					<cursor>
 						<Cursor fx:constant="HAND" />
 					</cursor>
 				</FontAwesomeIconView>
-				<FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="48.0" layoutY="269.0" size="30" text="">
+				<FontAwesomeIconView fill="WHITE"
+					glyphName="SEARCH" layoutX="48.0" layoutY="269.0" size="30"
+					text="">
 					<cursor>
 						<Cursor fx:constant="HAND" />
 					</cursor>
 				</FontAwesomeIconView>
-				<FontAwesomeIconView fill="WHITE" glyphName="COG" layoutX="49.0" layoutY="347.0" size="30">
+				<FontAwesomeIconView fill="WHITE"
+					glyphName="COG" layoutX="49.0" layoutY="347.0" size="30">
 					<cursor>
 						<Cursor fx:constant="HAND" />
 					</cursor>
 				</FontAwesomeIconView>
-				<FontAwesomeIconView fill="WHITE" glyphName="HEARTBEAT" layoutX="47.0" layoutY="427.0" size="30">
+				<FontAwesomeIconView fill="WHITE"
+					glyphName="HEARTBEAT" layoutX="47.0" layoutY="427.0" size="30">
 					<cursor>
 						<Cursor fx:constant="HAND" />
 					</cursor>
 				</FontAwesomeIconView>
-				<Label layoutX="123.0" layoutY="732.0" styleClass="closeSesion" stylesheets="@../resources/css/application.css" text="Cerrar sesión" textFill="WHITE">
+				<Label layoutX="123.0" layoutY="732.0"
+					styleClass="closeSesion"
+					stylesheets="@../resources/css/application.css"
+					text="Cerrar sesión" textFill="WHITE">
 					<font>
 						<Font name="Segoe UI Symbol" size="13.0" />
 					</font>
@@ -591,7 +850,8 @@
 						<Cursor fx:constant="HAND" />
 					</cursor>
 				</Label>
-				<FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="104.0" layoutY="746.0" size="15">
+				<FontAwesomeIconView fill="WHITE"
+					glyphName="USER" layoutX="104.0" layoutY="746.0" size="15">
 					<cursor>
 						<Cursor fx:constant="HAND" />
 					</cursor>

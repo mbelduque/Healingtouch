@@ -14,7 +14,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/com/healingtouch/view/Doctor.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/com/healingtouch/view/Manager.fxml"));
 			Scene scene = new Scene(root);
 			primaryStage.initStyle(StageStyle.UNDECORATED);
 			primaryStage.setScene(scene);
