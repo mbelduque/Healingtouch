@@ -1,0 +1,293 @@
+╔══════════════════════════════════════════════════════════════════════════════════╗
+║                    HEALINGTOUCH - ARQUITECTURA JAVAFX                              ║
+║                           Patrón de Capas (Layered)                               ║
+╚══════════════════════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                              CAPA DE PRESENTACIÓN                                 │
+│                              (Presentation Layer)                                 │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                   │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐                  │
+│  │  Login.fxml     │  │  Patient.fxml   │  │  Doctor.fxml    │                  │
+│  │  Manager.fxml   │  │  + CSS          │  │  + Imágenes     │                  │
+│  └────────┬────────┘  └────────┬────────┘  └────────┬────────┘                  │
+│           │                    │                     │                            │
+│           └────────────────────┴─────────────────────┘                            │
+│                                │                                                  │
+│  ┌─────────────────────────────▼─────────────────────────────────────┐           │
+│  │              CONTROLADORES (Controllers)                           │           │
+│  │  - LoginController      - PatientController                       │           │
+│  │  - DoctorController     - ManagerController                       │           │
+│  │                                                                    │           │
+│  │  Responsabilidades:                                                │           │
+│  │  • Manejo de eventos UI                                            │           │
+│  │  • Validación básica de entrada                                    │           │
+│  │  • Navegación entre vistas                                         │           │
+│  │  • Delegación a servicios                                          │           │
+│  └────────────────────────────────────────────────────────────────────┘           │
+│                                                                                   │
+└───────────────────────────────────┬───────────────────────────────────────────────┘
+                                    │
+                                    │ llama a
+                                    ▼
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                             CAPA DE LÓGICA DE NEGOCIO                             │
+│                              (Business Logic Layer)                               │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                   │
+│  ┌────────────────────────────────────────────────────────────────────┐          │
+│  │                    SERVICIOS (Services)                             │          │
+│  │                                                                     │          │
+│  │  ┌──────────────────────┐       ┌──────────────────────┐           │          │
+│  │  │ AuthenticationService│       │   PatientService     │           │          │
+│  │  │                      │       │                      │           │          │
+│  │  │ + authenticate()     │       │ + registerPatient()  │           │          │
+│  │  │ + emailExists()      │       │ + updatePatient()    │           │          │
+│  │  └──────────────────────┘       └──────────────────────┘           │          │
+│  │                                                                     │          │
+│  │  Responsabilidades:                                                 │          │
+│  │  • Validación de reglas de negocio                                  │          │
+│  │  • Orquestación de operaciones complejas                            │          │
+│  │  • Manejo de transacciones                                          │          │
+│  │  • Coordinación entre múltiples repositorios                        │          │
+│  └─────────────────────────────────────────────────────────────────────┘          │
+│                                                                                   │
+└───────────────────────────────────┬───────────────────────────────────────────────┘
+                                    │
+                                    │ usa
+                                    ▼
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                          CAPA DE ACCESO A DATOS                                   │
+│                          (Data Access Layer)                                      │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                   │
+│  ┌────────────────────────────────────────────────────────────────────┐          │
+│  │                  REPOSITORIOS (Repositories/DAO)                    │          │
+│  │                                                                     │          │
+│  │  ┌─────────────────────┐       ┌─────────────────────┐             │          │
+│  │  │   UserRepository    │       │  PatientRepository  │             │          │
+│  │  │                     │       │                     │             │          │
+│  │  │ + findByEmailAndPwd │       │ + existsByDocId()   │             │          │
+│  │  │ + existsByEmail()   │       │ + save()            │             │          │
+│  │  │ + save()            │       │ + findById()        │             │          │
+│  │  └─────────────────────┘       └─────────────────────┘             │          │
+│  │                                                                     │          │
+│  │  Responsabilidades:                                                 │          │
+│  │  • Operaciones CRUD                                                 │          │
+│  │  • Consultas SQL                                                    │          │
+│  │  • Mapeo ResultSet ↔ Objetos                                        │          │
+│  │  • Sin lógica de negocio                                            │          │
+│  └─────────────────────────────────────────────────────────────────────┘          │
+│                                                                                   │
+└───────────────────────────────────┬───────────────────────────────────────────────┘
+                                    │
+                                    │ obtiene conexión de
+                                    ▼
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                         CAPA DE CONFIGURACIÓN                                     │
+│                         (Configuration Layer)                                     │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                   │
+│  ┌────────────────────────────────────────────────────────────────────┐          │
+│  │                  CONFIGURACIÓN (Config)                             │          │
+│  │                                                                     │          │
+│  │  ┌─────────────────────────────────────────────────────┐            │          │
+│  │  │           DatabaseConfig (Singleton)                │            │          │
+│  │  │                                                     │            │          │
+│  │  │  + getInstance()       [Instancia única]           │            │          │
+│  │  │  + getConnection()     [Obtener conexión]          │            │          │
+│  │  │  + releaseConnection() [Devolver conexión]         │            │          │
+│  │  │                                                     │            │          │
+│  │  │  Configuración:                                     │            │          │
+│  │  │  - DRIVER: com.mysql.jdbc.Driver                   │            │          │
+│  │  │  - URL: jdbc:mysql://localhost:3306/healingtouchdb │            │          │
+│  │  │  - USER: root                                       │            │          │
+│  │  │  - PASSWORD: (vacío)                                │            │          │
+│  │  └─────────────────────────────────────────────────────┘            │          │
+│  │                                                                     │          │
+│  └─────────────────────────────────────────────────────────────────────┘          │
+│                                                                                   │
+└───────────────────────────────────┬───────────────────────────────────────────────┘
+                                    │
+                                    │ usa
+                                    ▼
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                             CAPA DE UTILIDADES                                    │
+│                             (Utility Layer)                                       │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                   │
+│  ┌────────────────────────────────────────────────────────────────────┐          │
+│  │               UTILIDADES Y HELPERS (Utils)                          │          │
+│  │                                                                     │          │
+│  │  ┌──────────────────────┐       ┌──────────────────────┐           │          │
+│  │  │ JDBCConnectionPool   │       │    ObjectPool<T>     │           │          │
+│  │  │                      │       │    (Abstract)        │           │          │
+│  │  │ Pool de conexiones   │◄──────│                      │           │          │
+│  │  │ reutilizables        │       │ Patrón Object Pool   │           │          │
+│  │  └──────────────────────┘       └──────────────────────┘           │          │
+│  │                                                                     │          │
+│  └─────────────────────────────────────────────────────────────────────┘          │
+│                                                                                   │
+└───────────────────────────────────┬───────────────────────────────────────────────┘
+                                    │
+                                    │
+                                    ▼
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                            CAPA DE MODELO                                         │
+│                            (Model/Domain Layer)                                   │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                   │
+│  ┌────────────────────────────────────────────────────────────────────┐          │
+│  │                    ENTIDADES (Entities/Models)                      │          │
+│  │                                                                     │          │
+│  │  ┌─────────────────┐              ┌─────────────────┐              │          │
+│  │  │      User       │              │    Patient      │              │          │
+│  │  │                 │              │                 │              │          │
+│  │  │ - email         │              │ - names         │              │          │
+│  │  │ - password      │              │ - surnames      │              │          │
+│  │  │                 │              │ - document_id   │              │          │
+│  │  │ + getters()     │              │ - phone         │              │          │
+│  │  │ + setters()     │              │ - birthdate     │              │          │
+│  │  └─────────────────┘              │ - address       │              │          │
+│  │                                   │                 │              │          │
+│  │                                   │ + getters()     │              │          │
+│  │                                   │ + setters()     │              │          │
+│  │                                   └─────────────────┘              │          │
+│  │                                                                     │          │
+│  │  Responsabilidades:                                                 │          │
+│  │  • Representar datos del dominio                                    │          │
+│  │  • POJOs simples (Plain Old Java Objects)                           │          │
+│  │  • Sin lógica de negocio                                            │          │
+│  └─────────────────────────────────────────────────────────────────────┘          │
+│                                                                                   │
+└───────────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                           BASE DE DATOS EXTERNA                                   │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                   │
+│                    ┌──────────────────────────────┐                              │
+│                    │    MySQL Database            │                              │
+│                    │    healingtouchdb            │                              │
+│                    │                              │                              │
+│                    │  ┌────────┐  ┌────────────┐  │                              │
+│                    │  │  user  │  │  patient   │  │                              │
+│                    │  └────────┘  └────────────┘  │                              │
+│                    └──────────────────────────────┘                              │
+│                                                                                   │
+└──────────────────────────────────────────────────────────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════════════════════════
+                              FLUJO DE DATOS - EJEMPLO
+═══════════════════════════════════════════════════════════════════════════════════
+
+Ejemplo: Usuario hace LOGIN
+
+1. Usuario ingresa email y contraseña en Login.fxml
+                    │
+                    ▼
+2. LoginController.login() captura el evento
+                    │
+                    ▼
+3. LoginController llama a AuthenticationService.authenticate(email, password)
+                    │
+                    ▼
+4. AuthenticationService valida entrada y llama a UserRepository.findByEmailAndPassword()
+                    │
+                    ▼
+5. UserRepository obtiene Connection desde DatabaseConfig.getConnection()
+                    │
+                    ▼
+6. UserRepository ejecuta SELECT en MySQL
+                    │
+                    ▼
+7. Si hay resultados, UserRepository crea objeto User y lo retorna
+                    │
+                    ▼
+8. AuthenticationService retorna User a LoginController
+                    │
+                    ▼
+9. LoginController muestra notificación de éxito y navega a Patient.fxml
+                    │
+                    ▼
+10. UserRepository devuelve Connection a DatabaseConfig.releaseConnection()
+
+
+═══════════════════════════════════════════════════════════════════════════════════
+                           PATRONES DE DISEÑO APLICADOS
+═══════════════════════════════════════════════════════════════════════════════════
+
+1. MVC (Model-View-Controller)
+   - Separación de UI, lógica y datos
+
+2. Repository Pattern (DAO)
+   - Abstracción de acceso a datos
+   - UserRepository, PatientRepository
+
+3. Service Layer Pattern
+   - Encapsulación de lógica de negocio
+   - AuthenticationService, PatientService
+
+4. Singleton Pattern
+   - DatabaseConfig (instancia única)
+
+5. Object Pool Pattern
+   - JDBCConnectionPool (reutilización de conexiones)
+
+6. Layered Architecture
+   - Separación en capas independientes
+   - Cada capa con responsabilidad específica
+
+
+═══════════════════════════════════════════════════════════════════════════════════
+                              PRINCIPIOS APLICADOS
+═══════════════════════════════════════════════════════════════════════════════════
+
+✓ Single Responsibility Principle (SRP)
+  Cada clase tiene una única responsabilidad
+
+✓ Separation of Concerns (SoC)
+  Presentación, lógica y datos están separados
+
+✓ Dependency Inversion Principle (DIP)
+  Controladores dependen de abstracciones (servicios)
+
+✓ Don't Repeat Yourself (DRY)
+  Lógica común en servicios y repositorios reutilizables
+
+✓ Low Coupling, High Cohesion
+  Capas independientes con interfaces claras
+
+
+═══════════════════════════════════════════════════════════════════════════════════
+                        VENTAJAS DE ESTA ARQUITECTURA
+═══════════════════════════════════════════════════════════════════════════════════
+
+1. MANTENIBILIDAD
+   - Fácil localizar y modificar código
+   - Cambios en una capa no afectan otras
+
+2. TESTABILIDAD
+   - Cada capa puede probarse independientemente
+   - Fácil crear mocks de servicios y repositorios
+
+3. ESCALABILIDAD
+   - Fácil agregar nuevas funcionalidades
+   - Estructura clara para nuevos desarrolladores
+
+4. REUTILIZACIÓN
+   - Servicios y repositorios usables desde cualquier controlador
+   - Lógica compartida sin duplicación
+
+5. FLEXIBILIDAD
+   - Fácil cambiar implementaciones
+   - Cambiar BD, UI o lógica de negocio sin afectar otras capas
+
+
+═══════════════════════════════════════════════════════════════════════════════════
+
+Creado por: Equipo de Desarrollo HealingTouch
+Fecha: Noviembre 2025
+Versión: 2.0

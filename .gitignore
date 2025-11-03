@@ -1,2 +1,15 @@
 /bin/
 /target/
+/src/com/
+/.settings/
+/.classpath
+/.project
+*.class
+*.log
+*.jar
+*.war
+*.ear
+.DS_Store
+.idea/
+*.iml
+/build.fxbuild
