@@ -1,133 +1,271 @@
-# Healingtouch
+# HealingTouch
 
-[![Build Status][build-shield]][build-url]
-[![Contributors][contributors-shield]](https://github.com/mbelduque/Healingtouch/graphs/contributors)
-<a href="https://github.com/mbelduque/Healingtouch/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/mbelduque/healingtouch.svg"></a>
-<a href="https://github.com/mbelduque/Healingtouch">
-<img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/mbelduque/healingtouch/total.svg">
-</a>
-[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/mauricio-belduque-guzman-925541137/)
-<a href="https://github.com/mbelduque/Healingtouch/stargazers">
-<img alt="GitHub stars" src="https://img.shields.io/github/stars/mbelduque/healingtouch.svg?style=social">
-</a>
-
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://adoptium.net/)
+[![JavaFX](https://img.shields.io/badge/JavaFX-17.0.2-green.svg)](https://openjfx.io/)
+[![Maven](https://img.shields.io/badge/Maven-3.6+-red.svg)](https://maven.apache.org/)
+[![Contributors](https://img.shields.io/github/contributors/mbelduque/Healingtouch.svg)](https://github.com/mbelduque/Healingtouch/graphs/contributors)
+[![Stars](https://img.shields.io/github/stars/mbelduque/Healingtouch.svg?style=social)](https://github.com/mbelduque/Healingtouch/stargazers)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?logo=linkedin&colorB=555)](https://www.linkedin.com/in/mauricio-belduque-guzman-925541137/)
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <h1 align="center">
-    <img src="https://github.com/mbelduque/Healingtouch/blob/master/src/com/healingtouch/resources/images/healingtouch.png">
-</h1>
-</p>
-  <h3 align="center">JavaFX Appointment Booking system</h3>
-
+    <img src="https://github.com/mbelduque/Healingtouch/blob/master/src/com/healingtouch/resources/images/healingtouch.png" alt="HealingTouch Logo">
+  </h1>
+  <h3 align="center">Medical Appointment Management System</h3>
   <p align="center">
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    A modern JavaFX desktop application for managing medical appointments, patient records, and healthcare workflows
+    <br />
+    <a href="#about-the-project"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/mbelduque/Healingtouch/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/mbelduque/Healingtouch/issues">Request Feature</a>
   </p>
 </p>
 
+---
 
-
-<!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
 * [About the Project](#about-the-project)
+  * [Key Features](#key-features)
   * [Built With](#built-with)
+  * [Architecture](#architecture)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
+  * [Database Setup](#database-setup)
 * [Usage](#usage)
-* [Roadmap](#roadmap)
+* [Project Structure](#project-structure)
+* [Documentation](#documentation)
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
+---
 
-
-<!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+HealingTouch is a comprehensive medical appointment management system built with JavaFX. It provides healthcare facilities with a modern, intuitive interface for managing patient records, scheduling appointments, and streamlining healthcare workflows.
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
+The application follows enterprise-level architecture patterns including MVC (Model-View-Controller), Service Layer, and Repository patterns, ensuring maintainability, scalability, and testability.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+### Key Features
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue with the tag.
+✨ **Patient Management**
+- Complete patient registration and profile management
+- Secure storage of personal and medical information
+- Search and filter capabilities
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+🗓️ **Appointment Scheduling**
+- Intuitive appointment booking interface
+- Multi-specialty support (General Medicine, Dentistry, Gynecology, Urology)
+- Real-time availability management
+
+🔐 **Authentication & Security**
+- Secure user authentication system
+- Role-based access control
+- Password encryption
+
+💻 **Modern UI/UX**
+- Material Design components (JFoenix)
+- Responsive and intuitive interface
+- System tray notifications
 
 ### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
 
+* **[JavaFX 17.0.2](https://openjfx.io/)** - Modern UI framework
+* **[JFoenix 8.0.8](http://www.jfoenix.com/)** - Material Design components
+* **[Maven](https://maven.apache.org/)** - Dependency management and build tool
+* **[MySQL 5.7+](https://www.mysql.com/)** - Database management system
+* **[Apache Commons DBCP](https://commons.apache.org/proper/commons-dbcp/)** - Connection pooling
+* **[FontAwesomeFX](https://bitbucket.org/Jerady/fontawesomefx/)** - Icon library
 
+### Architecture
 
-<!-- GETTING STARTED -->
+HealingTouch implements a clean, layered architecture:
+
+```
+┌─────────────────────┐
+│   Presentation      │  Controllers + FXML Views
+├─────────────────────┤
+│   Service Layer     │  Business Logic
+├─────────────────────┤
+│   Repository        │  Data Access (DAO)
+├─────────────────────┤
+│   Database          │  MySQL
+└─────────────────────┘
+```
+
+For detailed architecture information, see [ARCHITECTURE.md](ARCHITECTURE.md).
+
+---
+
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Follow these instructions to get HealingTouch running on your local machine.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
-```
+**Required Software:**
+
+* **Java Development Kit (JDK) 17 or higher**
+  ```sh
+  java -version  # Verify installation
+  ```
+  Download from: [Adoptium](https://adoptium.net/)
+
+* **Apache Maven 3.6 or higher**
+  ```sh
+  mvn -version   # Verify installation
+  ```
+  Download from: [Maven](https://maven.apache.org/download.cgi)
+
+* **MySQL Server 5.7 or higher**
+  ```sh
+  mysql --version  # Verify installation
+  ```
+  Download from: [MySQL](https://dev.mysql.com/downloads/mysql/)
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/mbelduque/Healingtouch.git
+   cd Healingtouch
+   ```
+
+2. **Build the project**
+   ```sh
+   mvn clean compile
+   ```
+
+3. **Package the application**
+   ```sh
+   mvn package
+   ```
+
+### Database Setup
+
+1. **Create the database**
+   ```sql
+   CREATE DATABASE healingtouchdb;
+   USE healingtouchdb;
+   ```
+
+2. **Create required tables**
+   ```sql
+   -- Users table
+   CREATE TABLE user (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       email VARCHAR(255) NOT NULL UNIQUE,
+       password VARCHAR(255) NOT NULL
+   );
+
+   -- Patients table
+   CREATE TABLE patient (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       names VARCHAR(255) NOT NULL,
+       surnames VARCHAR(255) NOT NULL,
+       document_id VARCHAR(50) NOT NULL UNIQUE,
+       telephone VARCHAR(20),
+       birthdate DATE,
+       address VARCHAR(500)
+   );
+   ```
+
+3. **Configure database connection**
+   
+   Edit the database credentials in `src/main/java/com/healingtouch/config/DatabaseConfig.java` if needed:
+   ```java
+   private static final String URL = "jdbc:mysql://localhost:3306/healingtouchdb?useSSL=false";
+   private static final String USER = "root";
+   private static final String PASSWORD = ""; // Update with your password
+   ```
+
+### Running the Application
+
+**Option 1: Using Maven (Recommended)**
 ```sh
-git clone https:://github.com/your_username_/Project-Name.git
-```
-3. Install NPM packages
-```sh
-npm install
-```
-4. Enter your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
+mvn javafx:run
 ```
 
+**Option 2: Using an IDE**
+- Open the project in your IDE (Eclipse, IntelliJ IDEA, VS Code)
+- Run `com.healingtouch.app.HealingTouchApp` as a Java Application
 
+For detailed build instructions, see [BUILD_INSTRUCTIONS.md](BUILD_INSTRUCTIONS.md).
 
-<!-- USAGE EXAMPLES -->
+---
+
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+### Login
+- Launch the application
+- Use your registered credentials to log in
+- New installations will require creating a user in the database
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+### Patient Management
+- Navigate to the patient registration section
+- Enter patient details (name, ID, contact information)
+- Save and manage patient records
 
+### Appointment Scheduling
+- Select a patient from the database
+- Choose appointment date and time
+- Assign a medical specialty
+- Confirm the appointment
 
+---
 
-<!-- ROADMAP -->
-## Roadmap
+## Project Structure
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+```
+Healingtouch/
+├── src/
+│   ├── main/
+│   │   ├── java/com/healingtouch/
+│   │   │   ├── app/              # Application entry point
+│   │   │   ├── config/           # Configuration (database, etc.)
+│   │   │   ├── controller/       # UI Controllers
+│   │   │   ├── model/            # Domain models (entities)
+│   │   │   ├── repository/       # Data access layer
+│   │   │   ├── service/          # Business logic
+│   │   │   └── util/             # Utilities
+│   │   └── resources/
+│   │       └── com/healingtouch/
+│   │           ├── css/          # Stylesheets
+│   │           ├── images/       # Images and icons
+│   │           └── view/         # FXML view files
+│   └── test/                     # Test files
+├── lib/                          # External libraries
+├── pom.xml                       # Maven configuration
+├── README.md                     # This file
+├── ARCHITECTURE.md               # Architecture documentation
+├── BUILD_INSTRUCTIONS.md         # Detailed build guide
+├── MIGRATION_GUIDE.md            # Migration information
+└── LICENSE                       # GPL v3 License
+```
 
+---
 
+## Documentation
 
-<!-- CONTRIBUTING -->
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** - Detailed architecture and design patterns
+- **[BUILD_INSTRUCTIONS.md](BUILD_INSTRUCTIONS.md)** - Complete build and deployment guide
+- **[MIGRATION_GUIDE.md](MIGRATION_GUIDE.md)** - Migration and update instructions
+- **[FUTURE_IMPROVEMENTS.md](FUTURE_IMPROVEMENTS.md)** - Planned features and enhancements
+
+---
+
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -135,52 +273,43 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+### Development Guidelines
+- Follow the existing code structure and patterns
+- Add appropriate comments and documentation
+- Test your changes thoroughly
+- Update documentation as needed
 
+---
 
-<!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the GNU General Public License v3.0. See [LICENSE](LICENSE) for more information.
 
+---
 
-
-<!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+**Mauricio Belduque Guzmán**
+- LinkedIn: [Mauricio Belduque](https://www.linkedin.com/in/mauricio-belduque-guzman-925541137/)
+- GitHub: [@mbelduque](https://github.com/mbelduque)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+**Project Link:** [https://github.com/mbelduque/Healingtouch](https://github.com/mbelduque/Healingtouch)
 
+---
 
-
-<!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
 
+* [JavaFX Documentation](https://openjfx.io/)
+* [JFoenix - Material Design Components](http://www.jfoenix.com/)
+* [Font Awesome Icons](https://fontawesome.com/)
+* [Apache Commons](https://commons.apache.org/)
+* [Maven Central Repository](https://mvnrepository.com/)
+* [MySQL Documentation](https://dev.mysql.com/doc/)
+* [GitHub - Version Control](https://github.com/)
 
+---
 
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[build-shield]: https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square
-[build-url]: #
-[contributors-shield]: https://img.shields.io/badge/contributors-1-orange.svg?style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[license-shield]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
-[license-url]: https://choosealicense.com/licenses/mit
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: https://raw.githubusercontent.com/othneildrew/Best-README-Template/master/screenshot.png
-
+<p align="center">
+  Made with ❤️ for healthcare professionals
+</p>
 
